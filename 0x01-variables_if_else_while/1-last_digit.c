@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/**
+ * main - Entry point of the program
+ *
+ * This program generates a random number, extracts its last digit,
+ * and prints information about the last digit.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;

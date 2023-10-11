@@ -14,12 +14,12 @@ void positive_or_negative(int i);
 int main(void);
 
 /**
- * main.h - Header file for the largest_number function
- *
- * This header file contains the function prototype for largest_number.
- * It defines the interface for using the largest_number function in other files.
+ * largest_number - returns the largest of 3 numbers
+ * @a: first integer
+ * @b: second integer
+ * @c: third integer
+ * Return: largest number
  */
-
 int largest_number(int a, int b, int c);
 
 #endif /* MAIN_H */

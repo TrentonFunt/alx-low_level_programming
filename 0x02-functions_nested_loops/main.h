@@ -50,4 +50,13 @@ int print_sign(int n);
  * Return: The absolute value of n
  */
 int _abs(int n);
+
+/**
+ * print_last_digit - Print the last digit of a number
+ *
+ * @n: The number to extract the last digit from
+ *
+ * Return: The value of the last digit
+ */
+int print_last_digit(int n);
 #endif /* MAIN_H */

@@ -1,0 +1,28 @@
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Description: This is the main function that calls `print_sign` to check
+ * and print the sign of a number.
+ *
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+	int result;
+
+	result = print_sign(10);
+	_putchar(result + '0');  /* Print the result (0, 1, or -1) */
+	_putchar('\n');
+
+	result = print_sign(0);
+	_putchar(result + '0');  /* Print the result (0, 1, or -1) */
+	_putchar('\n');
+
+	result = print_sign(-5);
+	_putchar(result + '0');  /* Print the result (0, 1, or -1) */
+	_putchar('\n');
+
+	return (0);
+}

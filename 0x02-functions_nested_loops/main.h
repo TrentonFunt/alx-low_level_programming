@@ -6,6 +6,13 @@ int _putchar(char c);
 
 /* Add prototypes for other functions you intend to use */
 /**
+ * print_to_98 - Print natural numbers from n to 98
+ *
+ * @n: The starting number
+ */
+void print_to_98(int n);
+
+/**
  * add - Add two integers and return the result
  *
  * @a: The first integer

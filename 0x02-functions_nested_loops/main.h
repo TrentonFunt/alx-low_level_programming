@@ -6,6 +6,11 @@ int _putchar(char c);
 
 /* Add prototypes for other functions you intend to use */
 /**
+ * jack_bauer - Print every minute of the day of Jack Bauer
+ */
+void jack_bauer(void);
+
+/**
  * print_alphabet - Prints the lowercase alphabet followed by a new line
  */
 void print_alphabet(void);

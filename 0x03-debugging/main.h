@@ -7,6 +7,27 @@
 void positive_or_negative(int i);
 
 /**
+ * convert_day - Converts day of the month to the day of the year, without accounting
+ * for leap years.
+ *
+ * @month: The month in number format.
+ * @day: The day of the month.
+ *
+ * Returns: The day of the year.
+ */
+int convert_day(int month, int day);
+
+/**
+ * print_remaining_days - Takes a date and prints how many days are left in the year,
+ * accounting for leap years.
+ *
+ * @month: The month in number format.
+ * @day: The day of the month.
+ * @year: The year.
+ */
+void print_remaining_days(int month, int day, int year);
+
+/**
  * main - Entry point for the program
  *
  * Return: Always 0

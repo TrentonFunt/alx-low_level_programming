@@ -1,0 +1,15 @@
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Description: This is the main function that calls `times_table` to print
+ * the times table in the specified format.
+ *
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+	times_table();
+	return (0);
+}

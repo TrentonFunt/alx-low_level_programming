@@ -6,6 +6,11 @@ int _putchar(char c);
 
 /* Add prototypes for other functions you intend to use */
 /**
+ * times_table - Print the times table in the specified format
+ */
+void times_table(void);
+
+/**
  * jack_bauer - Print every minute of the day of Jack Bauer
  */
 void jack_bauer(void);

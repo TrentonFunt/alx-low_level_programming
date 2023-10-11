@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Description: This is the main function that calls print_alphabet_x10 to
+ * print the lowercase alphabet ten times followed by new lines.
+ *
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+	print_alphabet_x10();
+
+	return (0);
+}

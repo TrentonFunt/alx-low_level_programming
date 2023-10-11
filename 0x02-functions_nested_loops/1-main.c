@@ -10,8 +10,8 @@
  */
 int main(void)
 {
-	print_alphabet();
-	_putchar('\n');
+    print_alphabet();
+    _putchar('\n');
 
-	return (0);
+    return (0);
 }

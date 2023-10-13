@@ -86,4 +86,6 @@ int _isdigit(int c);
 /* Function prototype for mul function */
 int mul(int a, int b);
 
+/* Function prototype for mul function */
+void print_number(int n);
 #endif /* MAIN_H */

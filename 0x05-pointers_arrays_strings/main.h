@@ -3,6 +3,13 @@
 
 #include <stdio.h>
 #include <unistd.h>
+include "main.h"
+
+/**
+ * _puts - Prints a string followed by a new line to stdout.
+ * @str: The string to be printed.
+ */
+void _puts(char *str);
 
 int _putchar(char c);  /* Prototype for the _putchar function */
 

@@ -4,6 +4,34 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
+ * puts2 - Prints every other character of a string.
+ * @str: The string to be printed.
+ */
+void puts2(char *str);
+
+/**
+ * _strcpy - Copies the string pointed to by
+ *src to the buffer pointed to by dest.
+ * @dest: The destination buffer where the string is copied.
+ * @src: The source string to be copied.
+ * Return: The pointer to dest.
+ */
+char *_strcpy(char *dest, char *src);
+
+/**
+ * print_array - Prints n elements of an array of integers.
+ * @a: The array of integers.
+ * @n: The number of elements to be printed.
+ */
+void print_array(int *a, int n);
+
+/**
+ * puts_half - Prints the second half of a string, followed by a new line.
+ * @str: The string to be printed.
+ */
+void puts_half(char *str);
+
+/**
  * puts2 - Prints every other character of a string, starting with the first character.
  * @str: The string to be printed.
  */

@@ -8,6 +8,7 @@ void puts_half(char *str)
 {
 	int length = 0;
 	int i;
+	int start_index;
 
 	/* Calculate the length of the string */
 	while (str[length] != '\0')
@@ -16,13 +17,12 @@ void puts_half(char *str)
 	}
 
 	/* Calculate the starting index for the second half */
-	i = (length - 1) / 2;
+	start_index = (length + 1) / 2;
 
 	/* Print the second half of the string */
-	while (str[i] != '\0')
+	for (i = start_index; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
-		i++;
 	}
 
 	_putchar('\n');

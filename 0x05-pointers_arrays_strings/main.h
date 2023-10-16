@@ -3,6 +3,17 @@
 
 #include <stdio.h>
 #include <unistd.h>
+/**
+ * rev_string - Reverses a string.
+ * @s: The string to be reversed.
+ */
+void rev_string(char *s);
+
+/**
+ * print_rev - Prints a string in reverse, followed by a new line.
+ * @s: The string to be printed in reverse.
+ */
+void print_rev(char *s);
 
 /**
  * _puts - Prints a string followed by a new line to stdout.

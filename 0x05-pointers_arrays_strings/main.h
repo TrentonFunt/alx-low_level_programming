@@ -2,8 +2,7 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include <unistd.h>
-include "main.h"
+#include <unistd.h
 
 /**
  * _puts - Prints a string followed by a new line to stdout.

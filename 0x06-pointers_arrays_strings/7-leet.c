@@ -9,16 +9,16 @@
 char *leet(char *str)
 {
 	int i, j;
-	char leet_map[10] = "AaEeOoTtLl";
-	char leet_replace[10] = "44330771";
+	char leet_map[10] = "AEOTLaeotl";
+	char leet_replace[10] = "4307143071";
 
 	/* Step 1: Loop through the input string */
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		/* Step 2: Loop through the leet_map array to find matches */
+		/* Step 2: Check if the current character is in leet_map */
 		for (j = 0; leet_map[j] != '\0'; j++)
 		{
-			/* Step 3: Check for matches and replace if found */
+			/* Step 3: If a match is found, replace the character */
 			if (str[i] == leet_map[j])
 			{
 				str[i] = leet_replace[j];

@@ -2,6 +2,16 @@
 #define MAIN_H
 
 /**
+ * _strncpy - Copies a string, up to 'n' characters, from src to dest.
+ * @dest: The destination string.
+ * @src: The source string to copy from.
+ * @n: The maximum number of characters to copy from src.
+ *
+ * Return: A pointer to the resulting string dest.
+ */
+char *_strncpy(char *dest, char *src, int n);
+
+/**
  * _strncat - Concatenates two strings, using at most n bytes from src.
  * @dest: The destination string.
  * @src: The source string to append to dest.

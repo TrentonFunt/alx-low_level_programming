@@ -1,5 +1,31 @@
 #ifndef MAIN_H
 #define MAIN_H
+/**
+ * string_toupper - Converts all lowercase letters to uppercase in a string.
+ * @str: The input string to be modified.
+ *
+ * Return: A pointer to the modified string.
+ */
+char *string_toupper(char *str);
+
+/**
+ * reverse_array - Reverses the content of an array of integers.
+ * @a: The array to be reversed.
+ * @n: The number of elements in the array.
+ */
+void reverse_array(int *a, int n);
+
+/**
+ * _strcmp - Compares two strings.
+ * @s1: The first string to compare.
+ * @s2: The second string to compare.
+ *
+ * Return:
+ * 0 if the strings are equal.
+ * A positive value if s1 is greater than s2.
+ * A negative value if s1 is less than s2.
+ */
+int _strcmp(char *s1, char *s2);
 
 /**
  * _strncpy - Copies a string, up to 'n' characters, from src to dest.

@@ -1,6 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 /**
+ * cap_string - Capitalizes the first letter of each word in a string.
+ * @str: The input string to be modified.
+ *
+ * Return: A pointer to the modified string.
+ */
+char *cap_string(char *str);
+
+/**
  * string_toupper - Converts all lowercase letters to uppercase in a string.
  * @str: The input string to be modified.
  *

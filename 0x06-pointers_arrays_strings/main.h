@@ -1,6 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 /**
+ * leet - Encodes a string into 1337.
+ * @str: The input string to be encoded.
+ *
+ * Return: A pointer to the encoded string.
+ */
+char *leet(char *str);
+
+/**
  * cap_string - Capitalizes all words in a string.
  * @str: The input string to be modified.
  *

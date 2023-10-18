@@ -1,6 +1,32 @@
 #ifndef MAIN_H
 #define MAIN_H
 /**
+ * main - Entry point of the program.
+ *
+ * Description:
+ * This is the entry point of the program. It demonstrates the assignment
+ * of the value 98 to an integer variable n, indirectly modifying the
+ * value of a[2], and then prints the result using printf.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void);
+
+/**
+ * print_number - Prints an integer using _putchar.
+ * @n: The integer to be printed.
+ */
+void print_number(int n);
+
+/**
+ * rot13 - Encodes a string using ROT13.
+ * @str: The input string to be encoded.
+ *
+ * Return: A pointer to the encoded string.
+ */
+char *rot13(char *str);
+
+/**
  * leet - Encodes a string into 1337.
  * @str: The input string to be encoded.
  *

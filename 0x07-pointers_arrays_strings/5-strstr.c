@@ -1,32 +1,31 @@
+#include "main.h"
+
 /**
- * _strstr - Locates a substring within a string.
- * @haystack: Pointer to the string to search in.
- * @needle: Pointer to the substring to find.
+ * _strstr - Locates a substring in a string.
+ * @haystack: The string to search in.
+ * @needle: The substring to find.
  *
- * Return: A pointer to the beginning of the located substring in 'haystack',
- *         or NULL if the substring is not found.
+ * Return: A pointer to the beginning of the located substring.
+ *         If the substring is not found, it returns NULL.
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
-
-	/* Loop through the characters in 'haystack' */
-	for (i = 0; haystack[i] != '\0'; i++)
+	while (*haystack)
 	{
-		/* Initialize 'j' for each character in 'haystack' */
-		j = 0;
+		char *h = haystack;
+		char *n = needle;
 
-		/* Loop to compare 'needle' with a potential substring in 'haystack' */
-		while (needle[j] != '\0' && haystack[i + j] != '\0'
-		&& needle[j] == haystack[i + j])
+		while (*haystack && *n && *haystack == *n)
 		{
-			j++; /* Increment 'j' for each matching character */
+			haystack++;
+			n++;
 		}
 
-		/* Check if a full match for 'needle' is found */
-		if (needle[j] == '\0')
-			return (haystack + i); /* Return a pointer to the start of the substring */
+		if (!*n)
+			return (h); /* Return a pointer to the start of the located substring */
+
+		haystack = h + 1;
 	}
 
-	return (NULL); /* Return NULL if the substring is not found in 'haystack' */
+	return (NULL); /* Return NULL if the substring is not found */
 }

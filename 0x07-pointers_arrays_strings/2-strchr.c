@@ -9,13 +9,14 @@
 char *_strchr(char *s, char c)
 {
 	/* Loop through the string 's' */
-	while (*s != '\0')
+	while (*s)
 	{
-		/* Check if the current character matches 'c' */
 		if (*s == c)
 		return (s); /* Return a pointer to the character if found */
+
 		s++; /* Move to the next character in the string */
 	}
 
-	return (c == '\0' ? s : NULL); /* Return NULL 'c' not found, or if 'c' */
+	/* If 'c' is not found, return NULL */
+	return (NULL);
 }

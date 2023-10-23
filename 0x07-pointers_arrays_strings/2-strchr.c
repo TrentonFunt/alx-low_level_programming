@@ -12,10 +12,12 @@ char *_strchr(char *s, char c)
 	while (*s)
 	{
 		if (*s == c)
-		return (s); /* Return a pointer to the character if found */
+			return (s); /* Return a pointer to the character if found */
 
 		s++; /* Move to the next character in the string */
 	}
+	if (*s == c)
+                        return (s);
 
 	/* If 'c' is not found, return NULL */
 	return (NULL);

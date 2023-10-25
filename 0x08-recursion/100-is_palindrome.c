@@ -1,6 +1,16 @@
 #include "main.h"
 
 /**
+ * check_palindrome - Recursive helper function to check palindromicity
+ * @s: The string to be checked for palindromicity
+ * @start: The starting index of the substring to check
+ * @end: The ending index of the substring to check
+ *
+ * Return: 1 if 's' is a palindrome, 0 if it is not.
+ */
+int check_palindrome(char *s, int start, int end);
+
+/**
  * str_len - Calculate the length of a string
  * @s: The string to calculate the length of
  *

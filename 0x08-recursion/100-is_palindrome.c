@@ -1,14 +1,19 @@
 #include "main.h"
 
 /**
- * check_palindrome - Recursive helper function to check palindromicity
- * @s: The string to be checked for palindromicity
- * @start: The starting index of the substring to check
- * @end: The ending index of the substring to check
+ * str_len - Calculate the length of a string
+ * @s: The string to calculate the length of
  *
- * Return: 1 if 's' is a palindrome, 0 if it is not.
+ * Return: The length of the string.
  */
-int check_palindrome(char *s, int start, int end);
+int str_len(char *s)
+{
+	int length = 0;
+
+	while (s[length] != '\0')
+		length++;
+	return (length);
+}
 
 /**
  * is_palindrome - Check if a string is a palindrome
@@ -24,7 +29,7 @@ int check_palindrome(char *s, int start, int end);
  */
 int is_palindrome(char *s)
 {
-	int length = _strlen(s);
+	int length = str_len(s);
 
 	if (length <= 1)
 	{
@@ -50,7 +55,7 @@ int check_palindrome(char *s, int start, int end)
 	{
 		return (1); /* If we've checked the whole string, it is a palindrome */
 	}
-	else if (s[start] != s[end)
+	else if (s[start] != s[end])
 	{
 		return (0); /* If char at 'start' and 'end' don't match,not a palindrome */
 	}

@@ -13,40 +13,30 @@
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1); /* Error: If 'n' is negative, return -1 */
-	}
-	else if (n == 0 || n == 1)
-	{
-		return (n); /* Base case: The square root of 0 or 1 is the number itself */
-	}
-	else
-	{
-		return (_sqrt_recursive(n, 2)); /* Start recursion with initial guess of 2 */
-	}
+	return (_sqrt_recursive(n, 2, n));
 }
 
 /**
- * _sqrt_recursive - Helper function for calculating square root recursively
+ * _sqrt_recursive - Recursive helper function for calculating square root
  * @n: The number for which to calculate the square root
  * @guess: The current guess for the square root
+ * @orig: The original value of 'n'
  *
  * Return: The natural square root of 'n', or -1 if 'n' does not have a natural
  * square root.
  */
-int _sqrt_recursive(int n, int guess)
+int _sqrt_recursive(int n, int guess, int orig)
 {
-	if (guess * guess == n)
+	if (guess * guess == orig)
 	{
 		return (guess); /* Found exact square root */
 	}
-	else if (guess * guess > n)
+	else if (guess * guess > orig)
 	{
 		return (-1); /* Error: Guess squared is greater than 'n' */
 	}
 	else
 	{
-		return (_sqrt_recursive(n, guess + 1)); /* Try the next guess */
+	return (_sqrt_recursive(n, guess + 1, orig)); /* Try the next guess */
 	}
 }

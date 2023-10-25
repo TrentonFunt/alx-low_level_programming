@@ -5,38 +5,46 @@
  * @n: The number for which to calculate the square root
  *
  * Description:
- * This function calculates the natural sqrt of a num 'n' using recursion.
- * If 'n' does not have a natural square root, the function returns -1.
+ * This function calculates the natural sqrt of a non-negative integer 'n'.
+ * If 'n' does not have a natural square root, the functn returns -1.
  *
- * Return: The natural square root of 'n', or -1 if 'n' does not have a natural
- * square root.
+ * Return: The natural square root of 'n', or -1 in case of an error.
  */
 int _sqrt_recursion(int n)
 {
-	return (_sqrt_recursive(n, 2, n));
-}
-
-/**
- * _sqrt_recursive - Recursive helper function for calculating square root
- * @n: The number for which to calculate the square root
- * @guess: The current guess for the square root
- * @orig: The original value of 'n'
- *
- * Return: The natural square root of 'n', or -1 if 'n' does not have a natural
- * square root.
- */
-int _sqrt_recursive(int n, int guess, int orig)
-{
-	if (guess * guess == orig)
+	if (n < 0)
 	{
-		return (guess); /* Found exact square root */
+		return (-1); /* Error case: If 'n' is negative, return -1 */
 	}
-	else if (guess * guess > orig)
+	else if (n == 0 || n == 1)
 	{
-		return (-1); /* Error: Guess squared is greater than 'n' */
+		return (n);  /* Base case: The square root of 0 or 1 is the number itself */
 	}
 	else
 	{
-	return (_sqrt_recursive(n, guess + 1, orig)); /* Try the next guess */
+		return (find_sqrt(n, 2)); /* Call helper function to find the square root */
+	}
+}
+
+/**
+ * find_sqrt - Recursive helper function to find the square root
+ * @n: The number for which to find the square root
+ * @x: The current estimate of the square root
+ *
+ * Return: The square root of 'n'.
+ */
+int find_sqrt(int n, int x)
+{
+	if (x * x == n)
+	{
+		return (x); /* The current estimate is the square root */
+	}
+	else if (x * x > n)
+	{
+		return (-1); /* No natural square root exists for 'n' */
+	}
+	else
+	{
+		return (find_sqrt(n, x + 1)); /* Increment the estimate and continue */
 	}
 }

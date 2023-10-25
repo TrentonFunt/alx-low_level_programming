@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* Prototype for the is_palindrome function */
+int is_palindrome(char *s);
+
 /* Prototype for the is_prime_number function */
 int is_prime_number(int n);
 

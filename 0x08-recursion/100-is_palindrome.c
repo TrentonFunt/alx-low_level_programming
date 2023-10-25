@@ -18,11 +18,14 @@ int check_palindrome(char *s, int start, int end);
  */
 int str_len(char *s)
 {
-	int length = 0;
-
-	while (s[length] != '\0')
-		length++;
-	return (length);
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (1 + str_len(s + 1));
+	}
 }
 
 /**

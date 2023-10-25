@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - Calculate the natural sqrt of a num using recursion
+ * _sqrt_recursion - Calculate the natural sqrt of a number using recursion
  * @n: The number for which to calculate the square root
  *
  * Description:
  * This function calculates the natural sqrt of a non-negative integer 'n'.
- * If 'n' does not have a natural square root, the functn returns -1.
+ * If 'n' does not have a natural square root, the function returns -1.
  *
  * Return: The natural square root of 'n', or -1 in case of an error.
  */

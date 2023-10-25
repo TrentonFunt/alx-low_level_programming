@@ -1,6 +1,15 @@
 #include "main.h"
 
 /**
+ * find_sqrt - Recursive helper function to find the square root
+ * @n: The number for which to find the square root
+ * @x: The current estimate of the square root
+ *
+ * Return: The square root of 'n'.
+ */
+int find_sqrt(int n, int x); /* Function declaration for find_sqrt */
+
+/**
  * _sqrt_recursion - Calculate the natural sqrt of a number using recursion
  * @n: The number for which to calculate the square root
  *

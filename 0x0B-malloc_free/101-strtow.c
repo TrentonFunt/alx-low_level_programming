@@ -18,23 +18,28 @@ char **strtow(char *str)
 
 	/* Check if str is NULL or empty */
 	if (str == NULL || str[0] == '\0')
+	{
 		return (NULL);
+	}
 
 	wordCount = countWords(str);
 
 	/* Allocate memory for the array of words */
 	words = (char **)malloc((wordCount + 1) * sizeof(char *));
 	if (words == NULL)
+	{
 		return (NULL);
+	}
 
 	/* Parse the input string to extract words */
 	for (i = 0, k = 0; str[i]; i++)
-{
-		if (str[i] != ' ' && wordStart == -1
-{
+	{
+		if (str[i] != ' ' && wordStart == -1)
+		{
 			wordStart = i;
-		} else if ((str[i] == ' ' || str[i + 1] == '\0') && wordStart != -1)
-{
+		}
+		else if ((str[i] == ' ' || str[i + 1] == '\0') && wordStart != -1)
+		{
 			words[k++] = copyWord(str, wordStart, i);
 			wordStart = -1;
 		}
@@ -56,9 +61,9 @@ int countWords(char *str)
 	int i, wordCount = 0;
 
 	for (i = 0; str[i]; i++)
-{
+	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-{
+		{
 			wordCount++;
 		}
 	}
@@ -81,10 +86,12 @@ char *copyWord(char *str, int start, int end)
 
 	word = (char *)malloc((end - start + 2) * sizeof(char));
 	if (word == NULL)
+	{
 		return (NULL);
+	}
 
 	for (i = start; i <= end; i++)
-{
+	{
 		word[j++] = str[i];
 	}
 

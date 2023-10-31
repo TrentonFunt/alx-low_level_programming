@@ -9,7 +9,7 @@ char *copyWord(char *str, int start, int end);
  * @str: The input string
  *
  * Return: On success, a pointer to an array of strings (words).
- *         Returns NULL if str is NULL, str is empty, or if memory allocation fails.
+ * Returns NULL if str is NULL, str is empty, or if memory allocation fails.
  */
 char **strtow(char *str)
 {
@@ -28,10 +28,13 @@ char **strtow(char *str)
 		return (NULL);
 
 	/* Parse the input string to extract words */
-	for (i = 0, k = 0; str[i]; i++) {
-		if (str[i] != ' ' && wordStart == -1) {
+	for (i = 0, k = 0; str[i]; i++)
+{
+		if (str[i] != ' ' && wordStart == -1
+{
 			wordStart = i;
-		} else if ((str[i] == ' ' || str[i + 1] == '\0') && wordStart != -1) {
+		} else if ((str[i] == ' ' || str[i + 1] == '\0') && wordStart != -1)
+{
 			words[k++] = copyWord(str, wordStart, i);
 			wordStart = -1;
 		}
@@ -52,9 +55,12 @@ int countWords(char *str)
 {
 	int i, wordCount = 0;
 
-	for (i = 0; str[i]; i++) {
+	for (i = 0; str[i]; i++)
+{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+{
 			wordCount++;
+		}
 	}
 
 	return (wordCount);
@@ -77,7 +83,8 @@ char *copyWord(char *str, int start, int end)
 	if (word == NULL)
 		return (NULL);
 
-	for (i = start; i <= end; i++) {
+	for (i = start; i <= end; i++)
+{
 		word[j++] = str[i];
 	}
 

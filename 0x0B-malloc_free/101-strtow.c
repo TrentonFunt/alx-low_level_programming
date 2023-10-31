@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int countWords(char *str);
 char *copyWord(char *str, int start, int end);
@@ -14,33 +13,33 @@ char *copyWord(char *str, int start, int end);
  */
 char **strtow(char *str)
 {
-    char **words;
-    int i, k, wordCount = 0, wordStart = -1;
+	char **words;
+	int i, k, wordCount = 0, wordStart = -1;
 
-    /* Check if str is NULL or empty */
-    if (str == NULL || str[0] == '\0')
-        return (NULL);
+	/* Check if str is NULL or empty */
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
 
-    wordCount = countWords(str);
+	wordCount = countWords(str);
 
-    /* Allocate memory for the array of words */
-    words = (char **)malloc((wordCount + 1) * sizeof(char *));
-    if (words == NULL)
-        return (NULL);
+	/* Allocate memory for the array of words */
+	words = (char **)malloc((wordCount + 1) * sizeof(char *));
+	if (words == NULL)
+		return (NULL);
 
-    /* Parse the input string to extract words */
-    for (i = 0, k = 0; str[i]; i++) {
-        if (str[i] != ' ' && wordStart == -1) {
-            wordStart = i;
-        } else if ((str[i] == ' ' || str[i + 1] == '\0') && wordStart != -1) {
-            words[k++] = copyWord(str, wordStart, i);
-            wordStart = -1;
-        }
-    }
+	/* Parse the input string to extract words */
+	for (i = 0, k = 0; str[i]; i++) {
+		if (str[i] != ' ' && wordStart == -1) {
+			wordStart = i;
+		} else if ((str[i] == ' ' || str[i + 1] == '\0') && wordStart != -1) {
+			words[k++] = copyWord(str, wordStart, i);
+			wordStart = -1;
+		}
+	}
 
-    words[k] = NULL; /* Set the last element to NULL to terminate the array */
+	words[k] = NULL; /* Set the last element to NULL to terminate the array */
 
-    return (words);
+	return (words);
 }
 
 /**
@@ -51,14 +50,14 @@ char **strtow(char *str)
  */
 int countWords(char *str)
 {
-    int i, wordCount = 0;
+	int i, wordCount = 0;
 
-    for (i = 0; str[i]; i++) {
-        if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-            wordCount++;
-    }
+	for (i = 0; str[i]; i++) {
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+			wordCount++;
+	}
 
-    return (wordCount);
+	return (wordCount);
 }
 
 /**
@@ -71,18 +70,18 @@ int countWords(char *str)
  */
 char *copyWord(char *str, int start, int end)
 {
-    char *word;
-    int i, j = 0;
+	char *word;
+	int i, j = 0;
 
-    word = (char *)malloc((end - start + 2) * sizeof(char));
-    if (word == NULL)
-        return (NULL);
+	word = (char *)malloc((end - start + 2) * sizeof(char));
+	if (word == NULL)
+		return (NULL);
 
-    for (i = start; i <= end; i++) {
-        word[j++] = str[i];
-    }
+	for (i = start; i <= end; i++) {
+		word[j++] = str[i];
+	}
 
-    word[j] = '\0';
+	word[j] = '\0';
 
-    return (word);
+	return (word);
 }

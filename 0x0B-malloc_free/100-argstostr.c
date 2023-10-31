@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -16,11 +15,15 @@ char *argstostr(int ac, char **av)
 
 	/* Check if ac is 0 or av is NULL */
 	if (ac == 0 || av == NULL)
+	{
 		return (NULL);
+	}
 
 	/* Calculate the total length of the concatenated string */
-	for (i = 0; i < ac; i++) {
-		for (j = 0; av[i][j] != '\0'; j++) {
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
 			totalLength++;
 		}
 		totalLength++; /* For the newline character */
@@ -31,11 +34,15 @@ char *argstostr(int ac, char **av)
 
 	/* Check if memory allocation failed */
 	if (concatenated == NULL)
+	{
 		return (NULL);
+	}
 
 	/* Copy the arguments and insert newline characters */
-	for (i = 0, k = 0; i < ac; i++) {
-		for (j = 0; av[i][j] != '\0'; j++) {
+	for (i = 0, k = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
 			concatenated[k++] = av[i][j];
 		}
 		concatenated[k++] = '\n';

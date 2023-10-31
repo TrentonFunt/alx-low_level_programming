@@ -9,7 +9,7 @@ char *copyWord(char *str, int start, int end);
  * @str: The input string
  *
  * Return: On success, a pointer to an array of strings (words).
- * Returns NULL if str is NULL, str is empty, or if memory allocation fails.
+ * Returns NULL if str is NULL, str is empty, or if memory alloc fails.
  */
 char **strtow(char *str)
 {

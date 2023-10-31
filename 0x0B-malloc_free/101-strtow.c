@@ -15,7 +15,7 @@ char *copyWord(char *str, int start, int end);
 char **strtow(char *str)
 {
     char **words;
-    int i, j, k, wordCount = 0, wordStart = -1;
+    int i, k, wordCount = 0, wordStart = -1;
 
     /* Check if str is NULL or empty */
     if (str == NULL || str[0] == '\0')

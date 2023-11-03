@@ -16,7 +16,7 @@ ptr = malloc(b);
 
 if (ptr == NULL)
 {
-exit(98);
+exit(70);
 }
 
 return (ptr);

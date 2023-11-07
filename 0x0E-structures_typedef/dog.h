@@ -40,4 +40,11 @@ void print_dog(struct dog *d);
  * Return: A pointer to the new dog, or NULL on failure
  */
 dog_t *new_dog(char *name, float age, char *owner);
+
+/**
+ * free_dog - Frees the memory allocated for a dog structure
+ * @d: Pointer to the dog structure to free
+ */
+void free_dog(dog_t *d)
+
 #endif /* DOG_H */

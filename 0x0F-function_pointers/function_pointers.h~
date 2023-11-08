@@ -1,0 +1,10 @@
+#ifndef FUNCTION_POINTERS_H
+#define FUNCTION_POINTERS_H
+
+/* Function prototype for _putchar (if you're using it) */
+int _putchar(char c);
+
+/* Function prototype for the print_name function */
+void print_name(char *name, void (*f)(char *));
+
+#endif /* FUNCTION_POINTERS_H */

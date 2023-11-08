@@ -8,6 +8,8 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
+
+/* Check for NULL and f function */
 if (name != NULL && f != NULL)
 {
 f(name);

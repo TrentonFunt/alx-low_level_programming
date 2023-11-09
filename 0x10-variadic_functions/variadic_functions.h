@@ -4,7 +4,7 @@
 #include <stdarg.h>
 
 /**
- * struct format_t - Struct to match format 
+ * struct format_t - Struct to match format
  * @specifier: The format specifier
  * @func: The function pointer to handle
  */

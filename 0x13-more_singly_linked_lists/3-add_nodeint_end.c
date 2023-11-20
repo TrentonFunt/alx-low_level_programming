@@ -29,7 +29,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 
 	/* Otherwise, traverse the list to find the last node */
-	while (last_node->next != NULL)
+	while (fin_node->next != NULL)
 		fin_node = fin_node->next;
 
 	/* Update the last node to point to the new node */
